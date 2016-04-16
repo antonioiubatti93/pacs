@@ -1,0 +1,40 @@
+# Max number of grid elements
+MMAX=501
+# max number of iteration for Gauss-Siedel
+itermax=1000000
+# Tolerance for stopping criterion
+toler=1.0e-8
+# Bar length
+L=10.
+# First longitudinal dimension
+a1=1.
+# Second longitudinal dimension
+a2=1.
+# Time horizon
+T=200.
+# Dirichlet condition
+To=46.
+# External temperature 
+Te=20.
+# Conductivity
+k=0.164
+# Convection coefficient
+hc=200.0e-6
+# Specific heat per unit volume
+rhocv=1.
+# Number of elements
+M=40
+#Number of time steps
+N=160
+# Output file name
+outputFileName=resCN.dat
+# fileprint
+printfile=1
+# result on the screen
+printout=1
+# Norm option
+norm=Euclidean
+# Linear system solver
+solver=Thomas
+# Time differencing scheme
+timescheme=CN

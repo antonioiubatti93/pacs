@@ -1,0 +1,9 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -O3 -Wall
+
+.PHONY: compare
+
+compare:
+	./main -p input1.pot -1
+	./main -p input2.pot -2
+	./main -p input3.pot -3

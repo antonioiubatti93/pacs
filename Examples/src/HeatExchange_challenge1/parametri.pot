@@ -1,0 +1,30 @@
+# Max number of grid elements
+MMAX=501
+# max number of iteration for Gauss-Siedel
+itermax=100000
+# Tolerance for stopping criterion
+toler=1.0e-6
+# Bar length
+L=10.
+# First longitudinal dimension
+a1=1.
+# Second longitudinal dimension
+a2=1.
+# Dirichlet condition
+To=0.
+# External temperature 
+Te=20.
+# Conductivity
+k=0.164
+# Convection coefficient
+hc=200.0e-6
+# Number of elements
+M=51
+# CHALLENGE MODIFICATION: output file name
+outputFileName=res.dat
+# CHALLENGE MODIFICATION: print on the screen option
+printout=1
+# CHALLENGE MODIFICATION: print on a file option
+printfile=1
+# CHALLENGE MODIFICATION: norm option
+norm=Euclidean
