@@ -1,0 +1,3 @@
+grid.o: grid.cpp Polygon.hpp grid.hpp
+main.o: main.cpp Polygon.hpp grid.hpp GetPot.hpp
+Polygon.o: Polygon.cpp Polygon.hpp
