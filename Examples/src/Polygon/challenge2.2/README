@@ -5,6 +5,5 @@ Print the help with
 	./main -h [--help]
 for more information.
 
-Up to now: I thimnk there is a problem in deallocating the bare pointer in class AbstractPolygon.
-I did not manage to fix the bug, but the method area() actually works. Sorry :(
+Up to now: Fixed the memory leak using a shared pointer.
 	

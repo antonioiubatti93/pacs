@@ -12,7 +12,7 @@ using namespace Geometry;
 
 // Constructor that takes as input the string filename
 
-Grid::Grid(std::string filename): A(0.) { // Default constructor for edges and boundary
+Grid::Grid(std::string filename) { // Default constructor for edges and boundary
 	//reading line by line from a generic input file ifile
 	std::ifstream ifile;
 	ifile.open(filename,std::ios::in);
@@ -50,7 +50,6 @@ Grid::Grid(std::string filename): A(0.) { // Default constructor for edges and b
 		is >> v[0] >> v[1] >> v[2];
 		Triangle triangle(v,points); // new constructor: only vertices indexes and points vector
 		elems[index] = std::make_shared<Triangle>(triangle);
-		A += elems[index]->area();
 		}
 		else 
 		{ 
@@ -60,7 +59,6 @@ Grid::Grid(std::string filename): A(0.) { // Default constructor for edges and b
 		is >> v[0] >> v[1] >> v[2] >> v[3];
 		Square square(v,points);
 		elems[index] = std::make_shared<Square>(square);
-		A += elems[index]->area();
 		}
 		else{ // Any other character is interpreted as 'other polygon' for simplicity
 		std::vector<std::size_t> v;
@@ -70,7 +68,6 @@ Grid::Grid(std::string filename): A(0.) { // Default constructor for edges and b
 		}
 		Polygon polygon(v,points);
 		elems[index] = std::make_shared<Polygon>(polygon);
-		A += elems[index]->area();
 		} 
 		}
 	}
@@ -81,9 +78,15 @@ Grid::Grid(std::string filename): A(0.) { // Default constructor for edges and b
 // Return the area of the mesh
 
 double Grid::area() const {
+	double A{0.};
+	for(std::size_t k=0; k<elems.size(); k++)
+		A += elems[k]->area();
 	return A;
 };
 
 double Grid::area() {
+	double A{0.};
+	for(std::size_t k=0; k<elems.size(); k++)
+		A += elems[k]->area();
 	return A;
 };

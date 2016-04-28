@@ -4,6 +4,7 @@
 #include <vector>
 #include <array>
 #include <utility>
+#include <memory>
 
 /*!  @file Polygon.hpp 
   @brief This is an example of class hierarchy that
@@ -99,7 +100,7 @@ namespace Geometry
     //! Move constructor
     AbstractPolygon & operator=(AbstractPolygon&&)=default;
     //! virtual destructor
-    virtual ~AbstractPolygon(){delete p;};
+    virtual ~AbstractPolygon(){};
     //! Returns the number of vertices.
     /*!  We return Vertices::size_type and not just int because
       size_type is guaranteed to be the correct type for indexes in
@@ -120,7 +121,7 @@ namespace Geometry
   protected:
 // CHALLENGE MODIFICATION: vector of indexes and bare pointer to the vector of points, stored in a Grid object
     std::vector<std::size_t> vertexes;
-    std::vector<Point2D>* p;
+    std::shared_ptr<std::vector<Point2D> > p;
   };
 
   //! Class for a generic Polygon

@@ -20,7 +20,6 @@ class Grid{
 	private:
 	std::vector<Point2D> points;
 	std::vector<std::shared_ptr<AbstractPolygon > > elems;
-	double A;
 };
 
 #endif
