@@ -4,6 +4,4 @@ The class AbstractPolygon contains the minimal setting.
 Print the help with
 	./main -h [--help]
 for more information.
-
-Up to now: Fixed the memory leak using a shared pointer.
 	

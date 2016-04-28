@@ -19,7 +19,8 @@ namespace Geometry{
   // ********************* BASE CLASS **********************
   
   AbstractPolygon::AbstractPolygon(Vertices const & v, std::vector<Point2D> & pp):vertexes(v),p(nullptr){
-	p = std::make_shared<std::vector<Point2D> >(pp);
+	p = new std::vector<Point2D>(pp);
+	*p = pp;
   }
  
   // ****   POLYGON

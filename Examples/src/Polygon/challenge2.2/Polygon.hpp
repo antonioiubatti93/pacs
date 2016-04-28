@@ -121,7 +121,7 @@ namespace Geometry
   protected:
 // CHALLENGE MODIFICATION: vector of indexes and bare pointer to the vector of points, stored in a Grid object
     std::vector<std::size_t> vertexes;
-    std::shared_ptr<std::vector<Point2D> > p;
+    std::vector<Point2D>* p;
   };
 
   //! Class for a generic Polygon
