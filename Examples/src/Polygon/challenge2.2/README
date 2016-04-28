@@ -1,0 +1,7 @@
+This is challenge 2.2.
+Eliminated some functions provided in Polygon.hpp for simplicity.
+The class AbstractPolygon contains the minimal setting.
+Print the help with
+	./main -h [--help]
+for more information.
+	
