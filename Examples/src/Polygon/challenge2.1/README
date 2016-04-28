@@ -1,0 +1,5 @@
+This is challenge 2.1.
+Print the help with
+	./main -h [--help]
+for more information.
+	

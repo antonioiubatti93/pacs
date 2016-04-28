@@ -1,0 +1,9 @@
+This is challenge 2.3
+All files move from challenge 2.1 (naive implementation of class Grid)
+Type 
+	make printedges
+to produce the output with the edges.
+Print the help with
+	./main -h [--help]
+for more information.
+	
